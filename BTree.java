@@ -278,7 +278,10 @@ public class BTree{
         break;
       } else if (command == 'p'){
         System.out.println(tree);
+        System.out.println(tree.getData());
+        System.out.println(tree.currentLeaf);
       } else if (command == '=') {
+        // currentLeafがnullだからsetDataに失敗する。
         if (tree.setData(str)){
           System.out.println("値" + str + "の設定に成功しました。");
         } else {
